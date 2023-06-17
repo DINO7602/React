@@ -67,7 +67,6 @@ function RenderDish({dish}) {
             <div className="container mt-5">
                 <div className="row">
                     <RenderDish dish={props.dish}/>
-                    <RenderComments dish={props.comments}/>
                 </div>
             </div>
         )
