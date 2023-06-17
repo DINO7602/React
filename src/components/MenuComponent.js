@@ -22,7 +22,7 @@ const Menu = (props) => {
   const menu = props.dishes.map((dish) => {
       return (
           <div className="col-12 col-md-3"  key={dish.id}>
-              <RenderMenuItem dish={dish} onClick={props.onClick} />
+              <RenderMenuItem dish={dish} onClick={props.onClick}/>
           </div>
       );
   });

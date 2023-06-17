@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardTitle, CardImg, CardImgOverlay, CardBody } from "reactstrap";
 function RenderDish({dish}) {
-    
     if (dish != null)
             return (
                 <div className="col-12 col-md-6">
@@ -63,22 +62,18 @@ function RenderDish({dish}) {
 
   const  DishDetail = (props) => {
 
-    const dish = this.props.dish;
-    console.log(dish);
-
-    if (dish == null) {
-        return (<div></div>);
-    }
-    const dishItem = this.renderDish(dish);
-    const commentItem = this.renderComments(dish.comments);
-    return (
-        <div className="container mt-5">
-            <div className="row">
-                {dishItem}
-                {commentItem}
+    if (props.dish != null) {
+        return (
+            <div className="container mt-5">
+                <div className="row">
+                    <RenderDish dish={props.dish}/>
+                    <RenderComments dish={props.comments}/>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+
+
 }
     
   
